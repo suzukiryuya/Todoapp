@@ -1,0 +1,45 @@
+<!-- タスク一覧のビューファイル -->
+<div class="text-center">
+  <h1>タスク一覧</h1>
+  <h3><%= l Time.now, format: :short %></h3>
+  <%= link_to(new_task_path) do %>
+  <button type="button" class="btn btn-info">Create Task</button>
+  <%end%>
+</div>
+<!-- 表形式でタスクを出力する. -->
+<table style="width: 80%" align="center" class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">カテゴリ名</th>
+      <th scope="col">タスク名</th>
+      <th scope="col">編集</th>
+      <th scope="col">削除</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+    <!-- ログイン中のユーザーのidとタスクのuser_idが等しいものだけ、タスク一覧に表示する. -->
+    <!-- すなわち、ログインユーザーごとにタスク一覧の表示が変わる. -->
+    <% if current_user.id == task.user_id %>
+    <tr>
+      <!-- タスクのカテゴリと内容を表示する. -->
+      <td style="width: 40%"><%= task.category %></td>
+      <td style="width: 40%"><%= task.content %></td>
+
+      <!-- 編集と削除ボタンを表示する. -->
+      <td style="width: 10%">
+        <%= link_to(edit_task_path(task)) do%>
+        <button type="button" class="btn btn-primary">編集</button>
+        <%end%>
+      </td>
+      <td style="width: 10%">
+        <%= link_to(task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" }) do %>
+        <button type="button" class="btn btn-danger">削除</button>
+        <%end%>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  <% end %>
+</table>

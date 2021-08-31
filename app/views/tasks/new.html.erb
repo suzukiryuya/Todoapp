@@ -1,0 +1,31 @@
+<!-- タスク新規作成のビューファイル -->
+<div class="container">
+  <div class="form-head">
+    <h1>新規タスク</h1>
+  </div>
+
+  <!-- ユーザー新規登録が失敗した時のエラーメッセージ表示-->
+  <%= render "shared/task_message" %>
+  <!-- form_withを用いて入力された情報を送信する 入力フォームに必要なHTMLを作成する。-->
+  <!-- 生成されるHTML: <form action="/tasks" accept-charset="UTF-8" method="post"> -->
+  <!-- 上記のHTMLより、入力されたデータはcreateアクションに渡される。 -->
+  <%= form_with model: @task do |form| %>
+  <form class="contact" action="index.html" method="post">
+    <dl>
+      <!--入力フォームの作成-->
+      <dt><%= form.label :category, "カテゴリ"%></dt>
+      <dd><%= form.text_field :category, :size=>"60"%></dd>
+      <dt><%= form.label :content, "新規タスク"%></dt>
+      <dd><%= form.text_field :content, :size=>"60" %></dd>
+    </dl>
+    <!--提出ボタンの作成-->
+    <div class = "submit"><%= form.submit %></div>
+  </form>
+  <% end %>
+  <!-- 戻るボタンの生成. link_toメソッドにBootstrapを適用する. -->
+  <%= link_to(tasks_path) do %>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <button type="button" class="btn btn-outline-primary">戻る</button>
+  </div>
+  <%end%>
+</div>

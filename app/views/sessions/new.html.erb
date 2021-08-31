@@ -1,0 +1,23 @@
+<!-- ログインフォームのビューファイル -->
+<% provide(:title, "Log in") %>
+<div class="container">
+  <div class="form-head">
+    <h1>Log in</h1>
+  </div>
+      <!-- インスタンス変数がないので、リソースとURLを指定して入力内容を渡す. -->
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      <% end %>
+
+      <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+      <!-- 戻る ボタンによりトップページに戻る. -->
+      <%= link_to('/') do %>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button type="button" class="btn btn-outline-primary">戻る</button>
+      </div>
+      <%end%>
+</div>

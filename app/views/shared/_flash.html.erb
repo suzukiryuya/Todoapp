@@ -1,0 +1,5 @@
+<!-- フラッシュメッセージ用のテンプレートを作成 -->
+<!-- content_tagを用いて、動的なフラッシュメッセージを生成する. -->
+<% flash.each do |key,message| %>
+  <%= content_tag(:p, message, class: "alert alert-#{key}")%>
+<% end %>

@@ -1,0 +1,48 @@
+@import "argument";
+
+/* main-guideの小要素 */
+@mixin card($color){
+  width: 100%;
+  padding:40px 28px;
+  margin:16px 8px;
+  display: inline-block;
+  border-radius: 5px;
+  display: flex;
+  flex-direction:column;
+  background-color: $color;
+  &:hover{
+    box-shadow: 0 15px 10px 5px rgb(0, 0, 0);
+    /* transform:要素を変形するプロパティ */
+    transform: translateY(-10px); /* Y方向に-15移動する */
+  }
+  img{
+    margin: 16px auto 20px;
+    display: block;
+  }
+  h4{
+    text-align: center;
+  }
+}
+/* 各画像の親要素に対しての設定 各introの親要素 */
+.main-guide{
+  display: flex;
+}
+.top-main{
+  text-align: center;
+  h1{
+    margin:50px 0px;
+  }
+  p{
+    margin-bottom:50px;
+  }
+}
+/* 各要素 */
+.intro-1{
+  @include card($info1);
+}
+.intro-2{
+  @include card($info2);
+}
+.intro-3{
+  @include card($info3);
+}

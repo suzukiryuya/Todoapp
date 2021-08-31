@@ -1,0 +1,27 @@
+<!-- ユーザー編集のビューファイル -->
+<div class="container">
+  <div class="form-head">
+    <h1>ユーザーの編集</h1>
+  </div>
+
+  <!-- ユーザー編集に失敗した時のエラーメッセージを表示する. -->
+  <%= render "shared/user_message" %>
+  <!-- ユーザー情報をコントローラーに渡す. -->
+  <%= form_with model: @user do |form| %>
+  <form class="contact" action="index.html" method="post">
+    <dl>
+      <dt><%= form.label :name ,"ユーザー名"%></dt>
+      <dd><%= form.text_field :name ,:size=>"60"%></dd>
+      <dt><%= form.label :email ,"Email"%></dt>
+      <dd><%= form.text_field :email ,:size=>"60"%></dd>
+    </dl>
+    <div class = "submit"><%= form.submit %></div>
+  </form>
+  <% end %>
+
+  <%= link_to(tasks_path) do %>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <button type="button" class="btn btn-outline-primary">戻る</button>
+  </div>
+  <%end%>
+</div>
