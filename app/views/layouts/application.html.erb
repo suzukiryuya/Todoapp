@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TodoApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- application.scssとapplication.jsを読み込む. -->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!--Bootstrapの導入-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--ヘッダー メニュー欄を表示する。-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"><%= link_to("Todoアプリ","/")%></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <!-- ログインしている時のメニュー欄 -->
+            <% if logged_in? %>
+            <a class="nav-link"><%= link_to "#{current_user.name}さんようこそ", edit_user_path(current_user) %></a>
+            <a class="nav-link"><%= link_to "タスク一覧", tasks_path %></a>
+            <a class="nav-link"><%= link_to "ユーザー一覧", users_path %></a>
+            <a class="nav-link"><%= link_to "ログアウト", logout_path, method: :delete %></a>
+            <!-- ログインしていない時のメニュー欄 -->
+            <% else %>
+            <a class="nav-link"><%= link_to "新規登録", new_user_path %></a>
+            <a class="nav-link"><%= link_to "ログイン", login_path %></a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--フラッシュメッセージのテンプレートを読み込む.-->
+  <%= render "shared/flash" %>
+  <%= yield %>
+
+</body>
+</html>

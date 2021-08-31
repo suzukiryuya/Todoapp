@@ -1,0 +1,15 @@
+<!-- ユーザーの作成に失敗した時のエラーメッセージ -->
+<!-- 部分テンプレートとしてまとめておく -->
+<!-- エラーの個数と内容を表示する. -->
+<% if @user.errors.any? %>
+<div class="error_explanation">
+  <div class="alert alert-danger">
+    The form contains <%= pluralize(@user.errors.count, "error") %>
+  </div>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

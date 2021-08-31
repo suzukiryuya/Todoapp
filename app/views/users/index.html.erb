@@ -1,0 +1,19 @@
+<!-- ユーザー一覧を表示するビューファイル -->
+<div class="text-center">
+  <h1>List of user</h1>
+  <p>The name of the user who is logged in is colored.</p>
+</div>
+
+<!-- ユーザー名を一覧で表示する. -->
+<div class="user-list">
+  <ul class="list-group mx-auto" style="width: 80%" align="center">
+    <% @users.each do |user| %>
+    <!-- ログイン中のユーザーのみ色を変更する処理. -->
+    <% if current_user == user %>
+    <li class="list-group-item active" aria-current="true"><%= user.name %></li>
+    <% else %>
+    <li class="list-group-item"><%= user.name %></li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>

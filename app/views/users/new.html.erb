@@ -1,0 +1,32 @@
+<!-- ユーザー新規登録のビューファイル -->
+<div class="container">
+  <div class="form-head">
+    <h1>ユーザーの新規登録</h1>
+  </div>
+
+  <!-- ユーザー新規登録が失敗した時のエラーメッセージ表示-->
+  <%= render "shared/user_message" %>
+  <!-- form_withを用いて入力された情報を送信する 入力フォームに必要なHTMLを作成する。-->
+  <%= form_with model: @user do |form| %>
+  <form class="contact" action="index.html" method="post">
+    <dl>
+      <dt><%= form.label :name, "ユーザー名"%></dt>
+      <dd><%= form.text_field :name, :size=>"60"%></dd>
+      <dt><%= form.label :email, "Email"%></dt>
+      <dd><%= form.text_field :email, :size=>"60"%></dd>
+      <dt><%= form.label :password, "パスワード"%></dt>
+      <dd><%= form.password_field :password, :size=>"60"%></dd>
+      <dt><%= form.label :password_confirmation, "パスワード(確認)"%></dt>
+      <dd><%= form.password_field :password_confirmation, :size=>"60"%></dd>
+    </dl>
+    <div class = "submit"><%= form.submit %></div>
+  </form>
+  <% end %>
+
+  <!-- 戻る ボタンの生成 トップページに遷移する-->
+  <%= link_to('/') do %>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <button type="button" class="btn btn-outline-primary">戻る</button>
+  </div>
+  <%end%>
+</div>
