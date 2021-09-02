@@ -19,7 +19,6 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to tasks_path, success:"Successful new registration!"
     else
-      flash.now[:danger] = "Input correctly"
       render :new
     end
   end

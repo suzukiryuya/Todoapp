@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TodoApp</title>
+  <title>TodoApplication</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -20,30 +20,32 @@
 <body>
   <!--ヘッダー メニュー欄を表示する。-->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand"><%= link_to("Todoアプリ","/")%></a>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <!-- ログインしている時のメニュー欄 -->
-            <% if logged_in? %>
-            <a class="nav-link"><%= link_to "#{current_user.name}さんようこそ", edit_user_path(current_user) %></a>
-            <a class="nav-link"><%= link_to "タスク一覧", tasks_path %></a>
-            <a class="nav-link"><%= link_to "ユーザー一覧", users_path %></a>
-            <a class="nav-link"><%= link_to "ログアウト", logout_path, method: :delete %></a>
-            <!-- ログインしていない時のメニュー欄 -->
-            <% else %>
-            <a class="nav-link"><%= link_to "新規登録", new_user_path %></a>
-            <a class="nav-link"><%= link_to "ログイン", login_path %></a>
-            <% end %>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand{-sm|md|-lg|-xl|-xxl} navbar-expand-sm navbar-dark bg-dark mb-3">
+      <a class="navbar-brand"><%= link_to("Do! Do!! Do!!!","/")%></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav4" role="navigation">
+        <ul class="navbar-nav">
+          <% if logged_in? %>
+          <a class="nav-link"><%= link_to "#{current_user.name}さんようこそ", edit_user_path(current_user) %></a>
+          <a class="nav-link"><%= link_to "タスク一覧", tasks_path %></a>
+          <a class="nav-link"><%= link_to "ユーザー一覧", users_path %></a>
+          <a class="nav-link"><%= link_to "ログアウト", logout_path, method: :delete %></a>
+          <!-- ログインしていない時のメニュー欄 -->
+          <% else %>
+          <a class="nav-link"><%= link_to "新規登録", new_user_path %></a>
+          <a class="nav-link"><%= link_to "ログイン", login_path %></a>
+          <% end %>
+        </ul>
       </div>
     </nav>
   </header>
   <!--フラッシュメッセージのテンプレートを読み込む.-->
   <%= render "shared/flash" %>
   <%= yield %>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 </body>
 </html>
