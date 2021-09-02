@@ -17809,3 +17809,2903 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.6ms | Allocations: 11067)
 
 
+Started GET "/" for ::1 at 2021-09-02 21:23:53 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.1ms | Allocations: 335)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 627e5888b52d264f6c2c
+Version: webpack 4.46.0
+Time: 1109ms
+Built at: 2021/09/02 21:23:58
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-78a351edc767af526191.js    128 KiB  application  [emitted] [immutable]  application
+js/application-78a351edc767af526191.js.map    138 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-78a351edc767af526191.js js/application-78a351edc767af526191.js.map
+[./app/javascript/channels/index.js] 3.43 KiB {application} [built] [failed] [1 error]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+ERROR in ./app/javascript/channels/index.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/suzukiryuya/workspace/todo_app/app/javascript/channels/index.js: Unexpected token (14:0)
+
+  12 |  });
+  13 | });
+> 14 | </script>
+     | ^
+  15 |
+    at Parser._raise (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:798:17)
+    at Parser.raiseWithData (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:791:17)
+    at Parser.raise (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:752:17)
+    at Parser.unexpected (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:3257:16)
+    at Parser.parseExprAtom (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11520:20)
+    at Parser.parseExprSubscripts (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11081:23)
+    at Parser.parseUpdate (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11061:21)
+    at Parser.parseMaybeUnary (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11039:23)
+    at Parser.parseExprOps (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10882:23)
+    at Parser.parseMaybeConditional (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10856:23)
+    at Parser.parseMaybeAssign (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10814:21)
+    at Parser.parseExpressionBase (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10754:23)
+    at /Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:39
+    at Parser.allowInAnd (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12589:16)
+    at Parser.parseExpression (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:17)
+    at Parser.parseStatementContent (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12927:23)
+    at Parser.parseStatement (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12796:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13385:25)
+    at Parser.parseBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13376:10)
+    at Parser.parseProgram (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12718:10)
+    at Parser.parseTopLevel (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12709:25)
+    at Parser.parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14449:10)
+    at parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14501:38)
+    at parser (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/normalize-file.js:82:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transform.js:25:41)
+ @ ./app/javascript/packs/application.js 8:0-18
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 4653.2ms | Allocations: 43342)
+Completed 200 OK in 4678ms (Views: 4658.5ms | ActiveRecord: 1.1ms | Allocations: 47001)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:31:26 +0900
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.0ms | Allocations: 258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 2.1ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 180.9ms | Allocations: 26306)
+Completed 200 OK in 213ms (Views: 191.4ms | ActiveRecord: 1.5ms | Allocations: 30493)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:32:10 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 2269.9ms | Allocations: 91307)
+Completed 200 OK in 2271ms (Views: 2270.2ms | ActiveRecord: 0.1ms | Allocations: 91717)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:32:18 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1670.4ms | Allocations: 86836)
+Completed 200 OK in 1671ms (Views: 1670.7ms | ActiveRecord: 0.1ms | Allocations: 87242)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:32:50 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1570.2ms | Allocations: 86881)
+Completed 200 OK in 1571ms (Views: 1570.5ms | ActiveRecord: 0.2ms | Allocations: 87290)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:34:50 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 1.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 9442)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms | Allocations: 10598)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:35:51 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1803.6ms | Allocations: 86945)
+Completed 200 OK in 1805ms (Views: 1804.0ms | ActiveRecord: 0.1ms | Allocations: 87352)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:36:12 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1471.7ms | Allocations: 87518)
+Completed 200 OK in 1472ms (Views: 1471.9ms | ActiveRecord: 0.1ms | Allocations: 87924)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:36:19 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1710.8ms | Allocations: 87278)
+Completed 200 OK in 1713ms (Views: 1711.6ms | ActiveRecord: 0.1ms | Allocations: 87684)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:37:55 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 26.7ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1932.3ms | Allocations: 88279)
+Completed 200 OK in 1948ms (Views: 1945.2ms | ActiveRecord: 0.4ms | Allocations: 88685)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:38:15 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1582.8ms | Allocations: 87482)
+Completed 200 OK in 1584ms (Views: 1583.2ms | ActiveRecord: 0.2ms | Allocations: 87888)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:38:27 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1575.5ms | Allocations: 88217)
+Completed 200 OK in 1576ms (Views: 1575.7ms | ActiveRecord: 0.2ms | Allocations: 88623)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:39:36 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1915.8ms | Allocations: 88641)
+Completed 200 OK in 1917ms (Views: 1916.0ms | ActiveRecord: 0.2ms | Allocations: 89047)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:40:13 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1881.2ms | Allocations: 87353)
+Completed 200 OK in 1882ms (Views: 1881.5ms | ActiveRecord: 0.2ms | Allocations: 87759)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:40:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1522.6ms | Allocations: 87301)
+Completed 200 OK in 1524ms (Views: 1522.9ms | ActiveRecord: 0.1ms | Allocations: 87707)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:40:43 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1498.0ms | Allocations: 87745)
+Completed 200 OK in 1499ms (Views: 1498.3ms | ActiveRecord: 0.1ms | Allocations: 88151)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:40:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1687.7ms | Allocations: 87314)
+Completed 200 OK in 1688ms (Views: 1687.9ms | ActiveRecord: 0.1ms | Allocations: 87720)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:41:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1557.4ms | Allocations: 87322)
+Completed 200 OK in 1558ms (Views: 1557.6ms | ActiveRecord: 0.1ms | Allocations: 87728)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:42:06 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1797.1ms | Allocations: 88294)
+Completed 200 OK in 1798ms (Views: 1797.3ms | ActiveRecord: 0.3ms | Allocations: 88702)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:42:28 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1852.3ms | Allocations: 87972)
+Completed 200 OK in 1854ms (Views: 1853.1ms | ActiveRecord: 0.2ms | Allocations: 88378)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:42:53 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 1537.9ms | Allocations: 89438)
+Completed 200 OK in 1547ms (Views: 1546.2ms | ActiveRecord: 0.2ms | Allocations: 90591)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:43:21 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1860.2ms | Allocations: 88244)
+Completed 200 OK in 1861ms (Views: 1860.6ms | ActiveRecord: 0.1ms | Allocations: 88651)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:48:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 8663)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms | Allocations: 9069)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:48:24 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 9171)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 9577)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:49:00 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1851.5ms | Allocations: 86934)
+Completed 200 OK in 1853ms (Views: 1852.1ms | ActiveRecord: 0.2ms | Allocations: 87341)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:49:07 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1655.7ms | Allocations: 87319)
+Completed 200 OK in 1656ms (Views: 1655.9ms | ActiveRecord: 0.2ms | Allocations: 87725)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:49:16 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1523.0ms | Allocations: 87764)
+Completed 200 OK in 1524ms (Views: 1523.3ms | ActiveRecord: 0.1ms | Allocations: 88170)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:49:34 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1504.1ms | Allocations: 87670)
+Completed 200 OK in 1505ms (Views: 1504.3ms | ActiveRecord: 0.1ms | Allocations: 88076)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:50:20 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 1630.8ms | Allocations: 89503)
+Completed 200 OK in 1634ms (Views: 1633.0ms | ActiveRecord: 0.1ms | Allocations: 90656)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:50:27 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 1653.6ms | Allocations: 87757)
+Completed 200 OK in 1655ms (Views: 1654.0ms | ActiveRecord: 0.2ms | Allocations: 88164)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:50:47 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 9425)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.1ms | Allocations: 10577)
+
+
+Started GET "/users" for ::1 at 2021-09-02 21:55:16 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["user_id", 2], ["user_id", 3], ["user_id", 4], ["user_id", 5]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 10161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | Allocations: 18064)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 3.4ms | Allocations: 19028)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 21:55:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-09-02 21:55:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-09-02 21:56:27 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 2.5ms | Allocations: 489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 1194.3ms | Allocations: 43436)
+Completed 200 OK in 1216ms (Views: 1200.1ms | ActiveRecord: 2.0ms | Allocations: 46777)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 21:56:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/users" for ::1 at 2021-09-02 21:56:34 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["user_id", 2], ["user_id", 3], ["user_id", 4], ["user_id", 5]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 10400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 18542)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.9ms | Allocations: 19618)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 21:56:34 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 4153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 12226)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms | Allocations: 13224)
+
+
+Started GET "/users/2/edit" for ::1 at 2021-09-02 21:56:35 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.8ms | Allocations: 229)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 10240)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms | Allocations: 11346)
+
+
+Started PATCH "/users/2" for ::1 at 2021-09-02 21:56:36 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tarou", "email"=>"tarou@yahoo.com"}, "commit"=>"更新する", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "tarou@yahoo.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `update'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 3892)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 21:56:36 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 9846)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 10304)
+
+
+Started GET "/" for ::1 at 2021-09-02 21:56:39 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 8762)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 9171)
+
+
+Started GET "/users/2/edit" for ::1 at 2021-09-02 21:56:40 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 9336)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 10325)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 21:56:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-09-02 21:58:07 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 14178)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 1.2ms | Allocations: 14731)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 21:58:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/users" for ::1 at 2021-09-02 21:58:11 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["user_id", 2], ["user_id", 3], ["user_id", 4], ["user_id", 5]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 7578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 15570)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.1ms | Allocations: 16142)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 21:58:12 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 9855)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 10447)
+
+
+Started GET "/tasks/28" for ::1 at 2021-09-02 21:58:15 +0900
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for TasksController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-09-02 21:58:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/tasks/28/edit" for ::1 at 2021-09-02 21:58:20 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 1.2ms | Allocations: 225)
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 10023)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms | Allocations: 11226)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-09-02 21:58:21 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started PATCH "/tasks/28" for ::1 at 2021-09-02 21:58:22 +0900
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"仕事", "content"=>"アルバイト"}, "commit"=>"更新する", "id"=>"28"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 3280)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 21:58:22 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1755)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 9833)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.3ms | Allocations: 10293)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:00:05 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 1.1ms | Allocations: 366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 1.5ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 222.9ms | Allocations: 27075)
+Completed 200 OK in 242ms (Views: 228.3ms | ActiveRecord: 1.3ms | Allocations: 30883)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 22:00:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-09-02 22:01:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 54)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 8985)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 9470)
+
+
+Started GET "/users/2/edit" for ::1 at 2021-09-02 22:01:06 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.4ms | Allocations: 230)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 12174)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 13687)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:01:07 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 5086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 13158)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.8ms | Allocations: 15569)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:01:07 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["user_id", 2], ["user_id", 3], ["user_id", 4], ["user_id", 5]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 6034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 14025)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.6ms | Allocations: 14590)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:01:10 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 9844)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms | Allocations: 10303)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 22:01:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-09-02 22:02:28 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/suzukiryuya/workspace/todo_app/public/packs
+[Webpacker] Hash: f2701ba7ee94f11d09db
+Version: webpack 4.46.0
+Time: 1084ms
+Built at: 2021/09/02 22:02:31
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0e1984c70fd0ed370407.js    125 KiB  application  [emitted] [immutable]  application
+js/application-0e1984c70fd0ed370407.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0e1984c70fd0ed370407.js js/application-0e1984c70fd0ed370407.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 3723.1ms | Allocations: 9949)
+Completed 200 OK in 3724ms (Views: 3723.5ms | ActiveRecord: 0.2ms | Allocations: 10356)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:02:33 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:02:33 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 8061)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 8466)
+
+
+Started GET "/login" for ::1 at 2021-09-02 22:02:37 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8986)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 9928)
+
+
+Started POST "/login" for ::1 at 2021-09-02 22:02:44 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"itirou@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "itirou@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 217ms (ActiveRecord: 0.2ms | Allocations: 1054)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:02:45 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 9774)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.2ms | Allocations: 10233)
+
+
+Started DELETE "/tasks/11" for ::1 at 2021-09-02 22:02:47 +0900
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTask Destroy (6.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 14ms (ActiveRecord: 8.3ms | Allocations: 2799)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:02:47 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 9672)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 10128)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:02:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8763)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 9178)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:03:43 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 6e17dd04d647b104fbed
+Version: webpack 4.46.0
+Time: 931ms
+Built at: 2021/09/02 22:03:47
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9aa2211248d44939f33f.js   7.39 KiB  application  [emitted] [immutable]  application
+js/application-9aa2211248d44939f33f.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9aa2211248d44939f33f.js js/application-9aa2211248d44939f33f.js.map
+[./app/javascript/packs/application.js] 3.49 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/suzukiryuya/workspace/todo_app/app/javascript/packs/application.js: Unexpected token (22:0)
+
+  20 |  });
+  21 | });
+> 22 | </script>
+     | ^
+  23 |
+  24 | //= require jquery3
+  25 | //= require popper
+    at Parser._raise (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:798:17)
+    at Parser.raiseWithData (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:791:17)
+    at Parser.raise (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:752:17)
+    at Parser.unexpected (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:3257:16)
+    at Parser.parseExprAtom (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11520:20)
+    at Parser.parseExprSubscripts (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11081:23)
+    at Parser.parseUpdate (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11061:21)
+    at Parser.parseMaybeUnary (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11039:23)
+    at Parser.parseExprOps (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10882:23)
+    at Parser.parseMaybeConditional (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10856:23)
+    at Parser.parseMaybeAssign (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10814:21)
+    at Parser.parseExpressionBase (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10754:23)
+    at /Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:39
+    at Parser.allowInAnd (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12589:16)
+    at Parser.parseExpression (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:17)
+    at Parser.parseStatementContent (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12927:23)
+    at Parser.parseStatement (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12796:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13385:25)
+    at Parser.parseBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13376:10)
+    at Parser.parseProgram (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12718:10)
+    at Parser.parseTopLevel (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12709:25)
+    at Parser.parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14449:10)
+    at parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14501:38)
+    at parser (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/normalize-file.js:82:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transform.js:25:41)
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 3724.3ms | Allocations: 9828)
+Completed 200 OK in 3726ms (Views: 3724.8ms | ActiveRecord: 0.1ms | Allocations: 10249)
+
+
+Started GET "/logout" for ::1 at 2021-09-02 22:03:48 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/logout" for ::1 at 2021-09-02 22:03:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for ::1 at 2021-09-02 22:03:55 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/suzukiryuya/workspace/todo_app/public/packs
+[Webpacker] Hash: f2701ba7ee94f11d09db
+Version: webpack 4.46.0
+Time: 606ms
+Built at: 2021/09/02 22:03:57
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0e1984c70fd0ed370407.js    125 KiB  application  [emitted] [immutable]  application
+js/application-0e1984c70fd0ed370407.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0e1984c70fd0ed370407.js js/application-0e1984c70fd0ed370407.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 2117.6ms | Allocations: 9907)
+Completed 200 OK in 2119ms (Views: 2118.0ms | ActiveRecord: 0.2ms | Allocations: 10313)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:03:58 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:03:58 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 8059)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8464)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:05:02 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 6013421e69e409f3a347
+Version: webpack 4.46.0
+Time: 622ms
+Built at: 2021/09/02 22:05:04
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0e1984c70fd0ed370407.js    125 KiB  application  [emitted] [immutable]  application
+js/application-0e1984c70fd0ed370407.js.map    139 KiB  application  [emitted] [dev]        application
+         js/layout-49690661bbd639706af1.js   7.68 KiB       layout  [emitted] [immutable]  layout
+     js/layout-49690661bbd639706af1.js.map   3.52 KiB       layout  [emitted] [dev]        layout
+                             manifest.json  668 bytes               [emitted]              
+Entrypoint application = js/application-0e1984c70fd0ed370407.js js/application-0e1984c70fd0ed370407.js.map
+Entrypoint layout = js/layout-49690661bbd639706af1.js js/layout-49690661bbd639706af1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+[./app/javascript/packs/layout.js] 3.81 KiB {layout} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+ERROR in ./app/javascript/packs/layout.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/suzukiryuya/workspace/todo_app/app/javascript/packs/layout.js: Support for the experimental syntax 'jsx' isn't currently enabled (2:1):
+
+  1 | // ナビゲーションを閉じる処理
+> 2 | <script>
+    | ^
+  3 | $(document).ready(function () {
+  4 |  $(".navbar-nav li a").click(function(event) {
+  5 |  $(".navbar-collapse").collapse('hide');
+
+Add @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing.
+    at Parser._raise (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:798:17)
+    at Parser.raiseWithData (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:791:17)
+    at Parser.expectOnePlugin (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:3272:18)
+    at Parser.parseExprAtom (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11514:20)
+    at Parser.parseExprSubscripts (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11081:23)
+    at Parser.parseUpdate (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11061:21)
+    at Parser.parseMaybeUnary (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:11039:23)
+    at Parser.parseExprOps (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10882:23)
+    at Parser.parseMaybeConditional (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10856:23)
+    at Parser.parseMaybeAssign (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10814:21)
+    at Parser.parseExpressionBase (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10754:23)
+    at /Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:39
+    at Parser.allowInAnd (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12589:16)
+    at Parser.parseExpression (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:10748:17)
+    at Parser.parseStatementContent (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12927:23)
+    at Parser.parseStatement (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12796:17)
+    at Parser.parseBlockOrModuleBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13385:25)
+    at Parser.parseBlockBody (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:13376:10)
+    at Parser.parseProgram (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12718:10)
+    at Parser.parseTopLevel (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:12709:25)
+    at Parser.parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14449:10)
+    at parse (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/parser/lib/index.js:14501:38)
+    at parser (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/parser/index.js:52:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/normalize-file.js:82:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transformation/index.js:29:50)
+    at run.next (<anonymous>)
+    at Function.transform (/Users/suzukiryuya/workspace/todo_app/node_modules/@babel/core/lib/transform.js:25:41)
+    at transform.next (<anonymous>)
+
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 2104.2ms | Allocations: 9168)
+Completed 200 OK in 2105ms (Views: 2104.7ms | ActiveRecord: 0.0ms | Allocations: 9573)
+
+
+Started GET "/login" for ::1 at 2021-09-02 22:05:05 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 8440)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 8853)
+
+
+Started POST "/login" for ::1 at 2021-09-02 22:05:11 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"itirou@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "itirou@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 215ms (ActiveRecord: 0.1ms | Allocations: 926)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:05:11 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 9698)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 10155)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:05:13 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:05:13 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 8081)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 8488)
+
+
+Started GET "/?pp=help" for ::1 at 2021-09-02 22:05:40 +0900
+Processing by HomeController#top as HTML
+  Parameters: {"pp"=>"help"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 8081)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8494)
+
+
+Started GET "/?pp=help" for ::1 at 2021-09-02 22:05:40 +0900
+Processing by HomeController#top as HTML
+  Parameters: {"pp"=>"help"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8081)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 8488)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-09-02 22:05:40 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-09-02 22:05:47 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8081)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 8486)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:06:30 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 8839)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9991)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:06:30 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 8092)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 8504)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:06:31 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8081)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 8486)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:06:32 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 8107)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 8518)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:06:54 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 8836)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 9982)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:07:12 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 8836)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9982)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:07:38 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 8842)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 9989)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:07:51 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 1.4ms | Allocations: 222)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 9474)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 10440)
+
+
+Started POST "/users" for ::1 at 2021-09-02 22:08:05 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.8ms | Allocations: 544)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 9807)
+Completed 200 OK in 235ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 13461)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:08:16 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 8092)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 8506)
+
+
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2021-09-02 22:09:14 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 1.9ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 109.3ms | Allocations: 20972)
+Completed 200 OK in 145ms (Views: 128.3ms | ActiveRecord: 0.0ms | Allocations: 24270)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:09:16 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.5ms | Allocations: 231)
+  Rendered users/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 3879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 11917)
+Completed 200 OK in 58ms (Views: 42.8ms | ActiveRecord: 0.5ms | Allocations: 18298)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:09:18 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 9986)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 10676)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:09:19 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 12530)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 12968)
+
+
+Started POST "/users" for ::1 at 2021-09-02 22:09:37 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"itirou", "email"=>"itirou@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "itirou@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "itirou"], ["email", "itirou@example.com"], ["created_at", "2021-09-02 13:09:37.590862"], ["updated_at", "2021-09-02 13:09:37.590862"], ["password_digest", "$2a$12$izpbHhNKBvhAsUWH6sDZE.ohKhK5r.iSOsjCxg05wfg97Mrez8Sia"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 230ms (ActiveRecord: 7.0ms | Allocations: 4325)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:09:37 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 13023)
+Completed 200 OK in 83ms (Views: 75.7ms | ActiveRecord: 1.3ms | Allocations: 15307)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:09:39 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 7097)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 15111)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.5ms | Allocations: 15673)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:09:40 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1529)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 9627)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.5ms | Allocations: 10081)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:10:08 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 10632)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 11825)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:10:14 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2455)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 10566)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 11521)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:10:16 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1529)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 9627)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.3ms | Allocations: 10081)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:10:46 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 10638)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.4ms | Allocations: 11827)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:10:49 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 8881)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 9822)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-09-02 22:10:51 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.8ms | Allocations: 222)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 9981)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.3ms | Allocations: 11504)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:10:54 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9628)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms | Allocations: 10083)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:10:55 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 10577)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms | Allocations: 11144)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:11:06 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 11209)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.4ms | Allocations: 12378)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-09-02 22:11:08 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9953)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 11061)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:11:09 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 9977)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.3ms | Allocations: 10954)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:11:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 8887)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 9828)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:11:24 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8774)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 9181)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-09-02 22:11:33 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 10609)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.3ms | Allocations: 12335)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:11:35 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 9977)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 10959)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:11:35 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 10564)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.9ms | Allocations: 11121)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:11:36 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 13107)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.2ms | Allocations: 14044)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:12:11 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 9537)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 10690)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-09-02 22:12:13 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.6ms | Allocations: 222)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 9954)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 11462)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:12:15 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 9977)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 1.2ms | Allocations: 10959)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:12:16 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 10064)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms | Allocations: 10477)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:12:43 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 9530)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 10677)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-09-02 22:12:49 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9953)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms | Allocations: 11457)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:12:51 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 9983)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 10966)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:12:52 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.7ms | Allocations: 225)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 10021)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms | Allocations: 10581)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:13:07 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"数学", "content"=>"プリント課題"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "数学"], ["content", "プリント課題"], ["created_at", "2021-09-02 13:13:07.367675"], ["updated_at", "2021-09-02 13:13:07.367675"], ["user_id", 6]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 27ms (ActiveRecord: 1.8ms | Allocations: 7667)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:07 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1614)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 9716)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 10173)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:13:08 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 9337)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.1ms | Allocations: 9767)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:13:20 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"英語", "content"=>"英単語100ページ"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "英語"], ["content", "英単語100ページ"], ["created_at", "2021-09-02 13:13:20.511959"], ["updated_at", "2021-09-02 13:13:20.511959"], ["user_id", 6]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 7.7ms | Allocations: 3889)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:20 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 9796)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.3ms | Allocations: 10252)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:13:21 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 9337)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 9767)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:13:22 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>" ", "content"=>" "}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 1.4ms | Allocations: 1027)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 2763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 10774)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.1ms | Allocations: 13292)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:24 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 9786)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 10240)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:13:28 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 10600)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.5ms | Allocations: 11157)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:29 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 1702)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 9800)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.5ms | Allocations: 10255)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:13:31 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:13:31 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 8092)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 8500)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:13:32 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 9134)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 9687)
+
+
+Started POST "/users" for ::1 at 2021-09-02 22:13:51 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"jirou", "email"=>"jirou@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jirou@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jirou"], ["email", "jirou@example.com"], ["created_at", "2021-09-02 13:13:51.852978"], ["updated_at", "2021-09-02 13:13:51.852978"], ["password_digest", "$2a$12$pci/s0SvrtyaD9u4ivmdAeXm0TYX3wVE4YtaDsN0bLP8BbCPyWjT6"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 226ms (ActiveRecord: 6.8ms | Allocations: 3507)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:51 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 9666)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 10122)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:13:52 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 614)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 9339)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.1ms | Allocations: 9770)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:13:57 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"仕事", "content"=>"会議"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "仕事"], ["content", "会議"], ["created_at", "2021-09-02 13:13:57.403477"], ["updated_at", "2021-09-02 13:13:57.403477"], ["user_id", 7]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 7.0ms | Allocations: 3890)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:13:57 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 9740)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 10196)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:13:58 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 9336)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.1ms | Allocations: 9766)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:14:03 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"仕事", "content"=>"資料作成"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "仕事"], ["content", "資料作成"], ["created_at", "2021-09-02 13:14:03.993436"], ["updated_at", "2021-09-02 13:14:03.993436"], ["user_id", 7]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 15ms (ActiveRecord: 1.8ms | Allocations: 3889)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:14:04 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 9823)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 10279)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:14:04 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 9336)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.2ms | Allocations: 9766)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:14:10 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"プライベート", "content"=>"買い物"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "プライベート"], ["content", "買い物"], ["created_at", "2021-09-02 13:14:10.381827"], ["updated_at", "2021-09-02 13:14:10.381827"], ["user_id", 7]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms | Allocations: 3889)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:14:10 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 9911)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.3ms | Allocations: 10367)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:14:21 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?)[0m  [["user_id", 6], ["user_id", 7]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 10494)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.6ms | Allocations: 10929)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:14:24 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:14:24 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 8092)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8498)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:14:36 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8790)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 9219)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:14:51 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 9657)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 10070)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:15:00 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 13028)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 13457)
+
+
+Started POST "/users" for ::1 at 2021-09-02 22:15:14 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"test", "email"=>"test@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "test"], ["email", "test@example.com"], ["created_at", "2021-09-02 13:15:14.894722"], ["updated_at", "2021-09-02 13:15:14.894722"], ["password_digest", "$2a$12$IRGU/ofJ0pigEIuBUMmdoOZgzSPBdSg537E/g19VbKG/pDfW8N3yW"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 229ms (ActiveRecord: 6.3ms | Allocations: 3518)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:15:14 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 9694)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 10149)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:15:17 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 9337)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.2ms | Allocations: 9768)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:15:30 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 9682)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.6ms | Allocations: 10135)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:17:03 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:17:03 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 8081)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8486)
+
+
+Started GET "/users/new" for ::1 at 2021-09-02 22:17:27 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8790)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 9219)
+
+
+Started POST "/users" for ::1 at 2021-09-02 22:17:42 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tarou", "email"=>"tarou@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tarou@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "tarou"], ["email", "tarou@example.com"], ["created_at", "2021-09-02 13:17:43.182324"], ["updated_at", "2021-09-02 13:17:43.182324"], ["password_digest", "$2a$12$POh6PP28JrKzef5GyIGKRu0qe5DofaJ8IO8GP1ZDZt4S5LdmhWMYW"]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 233ms (ActiveRecord: 6.4ms | Allocations: 3506)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:17:43 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 9694)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 10149)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:17:45 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 9336)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms | Allocations: 9766)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:17:53 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"プライベート", "content"=>"食事"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "プライベート"], ["content", "食事"], ["created_at", "2021-09-02 13:17:53.726421"], ["updated_at", "2021-09-02 13:17:53.726421"], ["user_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 27ms (ActiveRecord: 6.7ms | Allocations: 3889)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:17:53 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 9781)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 10237)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:17:55 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 9336)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.2ms | Allocations: 9766)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:18:04 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"プライベート", "content"=>"振り込み"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "プライベート"], ["content", "振り込み"], ["created_at", "2021-09-02 13:18:04.715842"], ["updated_at", "2021-09-02 13:18:04.715842"], ["user_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 15ms (ActiveRecord: 6.6ms | Allocations: 3896)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:04 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 9865)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 10321)
+
+
+Started GET "/tasks/new" for ::1 at 2021-09-02 22:18:05 +0900
+Processing by TasksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered tasks/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 9336)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.6ms | Allocations: 9766)
+
+
+Started POST "/tasks" for ::1 at 2021-09-02 22:18:13 +0900
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"仕事", "content"=>"企画資料作成"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("category", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["category", "仕事"], ["content", "企画資料作成"], ["created_at", "2021-09-02 13:18:13.500937"], ["updated_at", "2021-09-02 13:18:13.500937"], ["user_id", 9]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms | Allocations: 3889)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:13 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 9950)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 10406)
+
+
+Started GET "/tasks/36/edit" for ::1 at 2021-09-02 22:18:17 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 9670)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.3ms | Allocations: 10879)
+
+
+Started PATCH "/tasks/36" for ::1 at 2021-09-02 22:18:23 +0900
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"仕事", "content"=>"企画資料作成(1)"}, "commit"=>"更新する", "id"=>"36"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTask Update (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "content" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["content", "企画資料作成(1)"], ["updated_at", "2021-09-02 13:18:23.298580"], ["id", 36]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 4600)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:23 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 9953)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.6ms | Allocations: 10410)
+
+
+Started DELETE "/tasks/35" for ::1 at 2021-09-02 22:18:29 +0900
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"35"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 35]]
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:39:in `destroy'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 2643)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:29 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 9864)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 10320)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:18:32 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?)[0m  [["user_id", 6], ["user_id", 7], ["user_id", 8], ["user_id", 9]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 10589)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 1.4ms | Allocations: 11023)
+
+
+Started GET "/users/9/edit" for ::1 at 2021-09-02 22:18:36 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_user_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 9362)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 10341)
+
+
+Started PATCH "/users/9" for ::1 at 2021-09-02 22:18:42 +0900
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"太郎", "email"=>"tarou@example.com"}, "commit"=>"更新する", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `update'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "tarou@example.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "太郎"], ["updated_at", "2021-09-02 13:18:42.164919"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:35:in `update'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms | Allocations: 4226)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:42 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 9866)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 10322)
+
+
+Started DELETE "/logout" for ::1 at 2021-09-02 22:18:45 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 278)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:18:45 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 8092)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 8501)
+
+
+Started GET "/login" for ::1 at 2021-09-02 22:18:48 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 11239)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 12175)
+
+
+Started POST "/login" for ::1 at 2021-09-02 22:18:59 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"itirou@example.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "itirou@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 219ms (ActiveRecord: 0.2ms | Allocations: 1036)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:18:59 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 9881)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 10338)
+
+
+Started GET "/users" for ::1 at 2021-09-02 22:19:04 +0900
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" IN (?, ?, ?, ?)[0m  [["user_id", 6], ["user_id", 7], ["user_id", 8], ["user_id", 9]]
+  ↳ app/views/users/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 10590)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms | Allocations: 11024)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:19:06 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 9854)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.6ms | Allocations: 10308)
+
+
+Started GET "/tasks/30/edit" for ::1 at 2021-09-02 22:19:08 +0900
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered shared/_task_message.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered tasks/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.4ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 9366)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.6ms | Allocations: 10344)
+
+
+Started PATCH "/tasks/30" for ::1 at 2021-09-02 22:19:12 +0900
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "task"=>{"category"=>"英語", "content"=>"英単語50ページ"}, "commit"=>"更新する", "id"=>"30"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "content" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["content", "英単語50ページ"], ["updated_at", "2021-09-02 13:19:12.770335"], ["id", 30]]
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:30:in `update'
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms | Allocations: 4557)
+
+
+Started GET "/tasks" for ::1 at 2021-09-02 22:19:12 +0900
+Processing by TasksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."created_at" DESC[0m
+  ↳ app/views/tasks/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered tasks/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 9866)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.4ms | Allocations: 10322)
+
+
+Started GET "/" for ::1 at 2021-09-02 22:19:17 +0900
+Processing by HomeController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 8788)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms | Allocations: 9204)
+
+

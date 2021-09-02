@@ -6,6 +6,7 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
+    flex:1;
     flex-direction: column;
 }
 li{
@@ -24,6 +25,11 @@ header{
         text-decoration:underline;
   		}
     }
+  }
+}
+.footer{
+  .text-muted{
+    font-size: 10px;
   }
 }
 /* 入力フォーム(create,updateなど)に適用 */
