@@ -32,4 +32,5 @@ HTML & SCSS
 
 ## 動画
 実際に使用している動画を掲載します。この動画を通して、少しでも使い方がわかって頂けると幸いです。
+
 ![todo-min](https://user-images.githubusercontent.com/87132718/131926552-836941fb-716b-44cb-8724-3abec7c478f5.gif)
